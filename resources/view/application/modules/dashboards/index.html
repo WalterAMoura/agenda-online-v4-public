@@ -1,0 +1,125 @@
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1>Dashboards</h1>
+                </div>
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <!--<li class="breadcrumb-item"><a href="{{URL}}/{{MAIN_PATH_APP}}/dashboards">Dashboards</a></li>-->
+                        <li class="breadcrumb-item active">Dashboards</li>
+                    </ol>
+                </div>
+            </div>
+        </div><!-- /.container-fluid -->
+    </section>
+    <section class="content">
+        <div class="container-fluid addPage">
+            <hr>
+
+            <p>Dashboards Agenda IASD Parque Regina.</p>
+            <p></p>
+
+            <hr>
+            {{status}}
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card card-info card-outline">
+                        <div class="card-header">
+                            <h3 class="card-title">Agenda Status Ano</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="table-responsive-sm col-md-6">
+                                    <table id="tbAgendaByStatus" class="table table-striped-columns table-hover table-sm">
+                                        <thead class="table-warning">
+                                        <tr>
+                                            <th style="width: 150px">ID</th>
+                                            <th style="width: 400px">Departamento</th>
+                                            <th style="width: 150px">Total</th>
+                                            <th style="width: 400px">Ações</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        {{itemsEventStatus}}
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="col-md-6">
+                                    {{chartsEventStatus}}
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="card card-info card-outline">
+                        <div class="card-header">
+                            <h3 class="card-title">Agenda Departamentos Ano</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="table-responsive-sm">
+                                        <table id="tbAgendaByDpto" class="table table-striped-columns table-hover table-sm">
+                                            <thead class="table-info">
+                                            <tr>
+                                                <th style="width: 150px">ID</th>
+                                                <th style="width: 400px">Departamento</th>
+                                                <th style="width: 150px">Total</th>
+                                                <th style="width: 400px">Ações</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            {{itemsDepartments}}
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    {{chartsDepartment}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-12">
+                    <div class="card card-success card-outline">
+                        <div class="card-header">
+                            <h3 class="card-title">Agenda Programaçôes/Eventos Especiais Ano</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="table-responsive-sm">
+                                        <table id="tbAgendaByProg" class="table table-striped-columns table-hover table-sm">
+                                            <thead class="table-success">
+                                            <tr>
+                                                <th style="width: 150px">ID</th>
+                                                <th style="width: 400px">Programaçôes/Eventos Especiais</th>
+                                                <th style="width: 150px">Total</th>
+                                                <th style="width: 400px">Ações</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            {{itemsPrograms}}
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    {{chartsPrograms}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

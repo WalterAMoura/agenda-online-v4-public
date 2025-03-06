@@ -1,0 +1,104 @@
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h1>{{title}}</h1>
+          <hr>
+        </div>
+        <div class="col-sm-6">
+          <ol class="breadcrumb float-sm-right">
+            <li class="breadcrumb-item"><a href="{{URL}}/{{MAIN_PATH_APP}}/worship">Recepção</a></li>
+            <li class="breadcrumb-item active">{{breadcrumbItem}}</li>
+          </ol>
+        </div>
+      </div>
+    </div><!-- /.container-fluid -->
+  </section>
+  <section class="content">
+    <div class="container-fluid addPage">
+      <a href="{{URL}}/{{MAIN_PATH_APP}}/worship">
+        <button type="button" class="btn btn-warning">Voltar</button>
+      </a>
+      <hr>
+      {{status}}
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card card-primary">
+            <div class="card-header">
+            </div>
+            <form method="post">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="card card-success">
+                      <div class="card-header">
+                        <div class="card-title">
+                          <h5>Equipe Louvor</h5>
+                        </div>
+                      </div>
+                      <div class="card-body">
+                        <div class="form-group">
+                          <label for="schedulerDate">Data Escala</label>
+                          <input class="form-control col-6" type="date" name="schedulerDate" id="schedulerDate" value="{{schedulerDate}}" required>
+                        </div>
+                        <div class="form-group">
+                          <label for="worshipTeam">Equipe de Louvor</label>
+                          <div class="select2-green">
+                            <select class="select2" multiple="multiple" data-placeholder="Escolha os cantores" data-dropdown-css-class="select2-green" style="width: 100%;" name="worships[]" id="worshipTeam" required>
+                              {{optWorships}}
+                            </select>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="worshipMusics">Musicas</label>
+                          <textarea class="form-control" id="worshipMusics" name="worshipMusics" style="height: 187px;">{{worshipMusics}}</textarea>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="card card-secondary">
+                      <div class="card-header">
+                        <div class="card-title">
+                          <h5>Mensagem Especial</h5>
+                        </div>
+                      </div>
+                      <div class="card-body">
+                        <div class="form-group">
+                          <label for="singers">Cantor(a)</label>
+                          <div class="select2-gray">
+                            <select class="select2" multiple="multiple" data-placeholder="Escolha os cantores" data-dropdown-css-class="select2-gray" style="width: 100%;" name="singers[]" id="singers">
+                              {{optSingers}}
+                            </select>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="singerMusics">Musicas</label>
+                          <textarea class="form-control" id="singerMusics" name="singerMusics" style="height: 273px;">{{singerMusics}}</textarea>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <button type="submit" class="btn btn-{{btnTipo}}">{{btnNome}}</button>
+                    </div>
+                    <div class="form-group">
+                      <a href="{{URL}}/{{MAIN_PATH_APP}}/worship/worship-team-lineup/new">
+                        <button type="button" class="btn btn-info {{disabledNew}}" style="display: {{displayNew}}">Novo</button>
+                      </a>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

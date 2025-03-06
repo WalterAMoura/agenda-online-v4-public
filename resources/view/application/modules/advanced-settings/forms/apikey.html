@@ -1,0 +1,74 @@
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h1>{{title}}</h1>
+          <hr>
+        </div>
+        <div class="col-sm-6">
+          <ol class="breadcrumb float-sm-right">
+            <!--<li class="breadcrumb-item"><a href="{{URL}}/agenda">Home</a></li>-->
+            <li class="breadcrumb-item"><a href="{{URL}}/{{MAIN_PATH_APP}}/advanced-settings">Configurações</a></li>
+            <li class="breadcrumb-item active">{{breadcrumbItem}}</li>
+          </ol>
+        </div>
+      </div>
+    </div><!-- /.container-fluid -->
+  </section>
+  <section class="content">
+    <div class="container-fluid addPage">
+      <a href="{{URL}}/{{MAIN_PATH_APP}}/advanced-settings/apikey">
+        <button type="button" class="btn btn-warning">Voltar</button>
+      </a>
+      <hr>
+      {{status}}
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card card-primary">
+            <div class="card-header">
+            </div>
+              <form method="post">
+                <div class="card-body">
+                  <div class="form-group">
+                    <label for="userId">Usuário</label>
+                    <select class="form-control col-4" name="userId" id="userId">
+                      {{optionsUsers}}
+                    </select>
+                    <span id="span-userId" style="color:#ff0000;"></span>
+                  </div>
+                  <div class="form-group">
+                    <label for="apikey">Apikey</label>
+                    <input type="text" name="apikey"  id="apikey" class="form-control col-6" value="{{apikey}}" required readonly>
+                  </div>
+                  <div class="form-group">
+                    <label for="apikeyName">Apikey nome</label>
+                    <input type="text" name="apikeyName" id="apikeyName" class="form-control col-6" value="{{apikeyName}}" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="apikeyDescription">Apikey descrição</label>
+                    <input type="text" name="apikeyDescription" id="apikeyDescription" class="form-control col-6" value="{{apikeyDescription}}" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="apikeyPath">Apikey Rota</label>
+                    <input type="text" name="apikeyPath" id="apikeyPath" class="form-control col-6" value="{{apikeyPath}}" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="statusApikey">Status Apikey</label>
+                    <select class="form-control col-4" name="statusApikey" id="statusApikey">
+                      {{optionsStatusApikey}}
+                    </select>
+                    <span id="span-statusApikey" style="color:#ff0000;"></span>
+                  </div>
+                  <div class="form-group">
+                    <button type="submit" class="btn btn-success">Salvar</button>
+                  </div>
+                </div>
+              </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

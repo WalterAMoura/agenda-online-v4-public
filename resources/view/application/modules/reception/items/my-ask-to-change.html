@@ -1,0 +1,18 @@
+<tr>
+  <td>{{schedulerDate}}</td>
+  <td>{{dayOfWeek}}</td>
+  <td>{{newLinkedUser}}</td>
+  <td>{{status}}</td>
+  <!--<td>{{comments}}</td>-->
+  <td>
+    <a href="{{URL}}/{{MAIN_PATH_APP}}/reception/ask-to-change/{{id}}/canceled" class="{{disabledCancel}}">
+      <button class="btn btn-danger {{disabledCancel}}" style="display: {{displayCancel}}">Cancelar Solicitação</button>
+    </a>
+    <a href="{{URL}}/{{MAIN_PATH_APP}}/reception/ask-to-change/{{id}}/accepted" class="{{disabledAccepted}}">
+      <button class="btn btn-success {{disabledAccepted}}" style="display: {{displayAccepted}}">Aceitar Solicitação</button>
+    </a>
+    <a href="{{URL}}/{{MAIN_PATH_APP}}/reception/ask-to-change/{{id}}/rejected" class="{{disabledRejected}}">
+      <button class="btn btn-warning {{disabledRejected}}" style="display: {{displayRejected}}">Recusar Solicitação</button>
+    </a>
+  </td>
+</tr>

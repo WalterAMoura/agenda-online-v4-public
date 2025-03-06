@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>{{title}}</title>
+  <link rel="icon" href="{{URL}}/favicon.ico"/>
+  <link rel="stylesheet" href="{{URL}}/lib/plugins/google-fonts/source-sans-pro.css">
+  <link rel="stylesheet" href="{{URL}}/lib/plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="{{URL}}/lib/css/adminlte.min.css">
+</head>
+  <body class="hold-transition login-page">
+
+    {{content}}
+
+    <script src="{{URL}}/lib/plugins/jquery/jquery.min.js"></script>
+    <script src="{{URL}}/lib/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <script>
+      $.widget.bridge('uibutton', $.ui.button)
+    </script>
+    <script src="{{URL}}/lib/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="{{URL}}/lib/js/adminlte.js"></script>
+  </body>
+</html>

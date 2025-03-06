@@ -1,0 +1,42 @@
+<div class="wrapper">
+
+  <nav class="main-header navbar navbar-expand navbar-dark">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="{{urlNavLink}}" class="nav-link">
+          {{nameNavLink}}
+        </a>
+      </li>
+    </ul>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle dropdown-hover" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fas fa-user-alt"></i>
+          <span class="text">{{userName}}</span>
+        </a>
+        <div class="dropdown-menu dropdown-menu-right">
+          <a class="dropdown-item {{disabledUpdatePassword}}" href="#" data-toggle="modal" data-target="#editaSenha">
+            <i class="fas fa-lock"></i> Alterar senha</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="{{URL}}/application/logout">
+            <i class="fas fa-sign-out-alt"></i> Sair</a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+  {{menu}}
+  {{content}}
+  {{passwd}}
+  <footer class="main-footer">
+    <strong>{{copyrigth}}<a href="{{site}}"> Desenvolvido por {{developed}} </a>.</strong>
+    All rights reserved.
+    <div class="float-right d-none d-sm-inline-block">
+      <b>Version</b> {{versionApp}}
+    </div>
+  </footer>
+  <aside class="control-sidebar control-sidebar-dark">
+  </aside>
+</div>

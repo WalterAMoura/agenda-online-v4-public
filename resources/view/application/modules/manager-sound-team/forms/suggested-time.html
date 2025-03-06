@@ -1,0 +1,54 @@
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h1>{{title}}</h1>
+          <hr>
+        </div>
+        <div class="col-sm-6">
+          <ol class="breadcrumb float-sm-right">
+            <li class="breadcrumb-item"><a href="{{URL}}/{{MAIN_PATH_APP}}/manager-sound-team">Sonoplastia</a></li>
+            <li class="breadcrumb-item active">{{breadcrumbItem}}</li>
+          </ol>
+        </div>
+      </div>
+    </div><!-- /.container-fluid -->
+  </section>
+  <section class="content">
+    <div class="container-fluid addPage">
+      <a href="{{URL}}/{{MAIN_PATH_APP}}/manager-sound-team/suggested-time">
+        <button type="button" class="btn btn-warning">Voltar</button>
+      </a>
+      <hr>
+      {{status}}
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card card-primary">
+            <div class="card-header">
+            </div>
+            <form method="post">
+              <div class="card-body">
+                <div class="form-group">
+                  <label for="dayOfWeek">Dia da Semana</label>
+                  <select class="form-control col-4" name="dayOfWeek" id="dayOfWeek">
+                    {{dayOfWeek}}
+                  </select>
+                  <span id="span-dayOffWeek" style="color:#ff0000;"></span>
+                </div>
+                <div class="form-group">
+                  <label for="suggestedTime">Horário Sugerido</label>
+                  <input type="text" name="suggestedTime" id="suggestedTime" class="form-control col-8" value="{{suggestedTime}}" placeholder="07h15 e 07h30" required>
+                </div>
+                <div class="form-group">
+                  <button type="submit" class="btn btn-{{btnTipo}}">{{btnNome}}</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

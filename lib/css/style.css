@@ -1,0 +1,25 @@
+*{margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif;}
+
+.mainCalendar, .calendarUser, .calendarManager, .mainCalendarEventsChurch{
+    width: 100%;
+    margin: 30px auto;
+    height: 125vh;
+}
+.calendar, .calendarEventsChurch{
+    height: 55vh;
+}
+.calendarTeamLineup, .calendarReceptionTeamLineup, .calendarWorshipTeamLineup{
+    width: 100%;
+    margin: 30px auto;
+    height: 75vh;
+}
+a.disabled {
+    pointer-events: none;
+    color: rgb(128, 128, 128);
+    text-decoration: none;
+}
+
+/* Opcional: define o estilo de quebra de linha na célula específica do Token */
+#tableAccessTokenWhatsApp td:nth-child(3) {
+    white-space: normal; /* Permite que o texto quebre linhas */
+}

@@ -1,0 +1,77 @@
+<section class="content">
+  <div class="container-fluid">
+    <row class="col-md-12">
+      <!--<form action="" method="post" action="{{URL}}/{{action}}" onsubmit="return editEvent();">-->
+      <form id="formViewEventsChurch">
+        <div class="modal fade" id="modalViewEventsChurch" tabindex="-1" role="dialog" aria-labelledby="modalViewEventsChurch" aria-hidden="true">
+          <div  class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title texto-modal text-center" id="idTitleModal">{{title}}</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                  <div class="form-group" id="div-id">
+                    <label for="id">ID</label>
+                    <input class="form-control col-5" type="text" name="id" id="id" value="" readonly>
+                  </div>
+                  <div class="form-group">
+                    <label for="date">Data :</label>
+                    <input class="form-control col-5" type="date" name="date" id="date" value="" readonly>
+                  </div>
+                  <div class="form-group">
+                    <label for="time">Hora :</label>
+                    <input class="form-control col-5" type="time" name="time" id="time" value="" readonly>
+                  </div>
+                  <div class="form-group">
+                    <label for="orador">Responsável :</label>
+                    <input class="form-control col-10" type="text" name="orador" id="orador" value="" readonly>
+                    <span id="span-orador" style="color:#ff0000;"></span>
+                  </div>
+                  <div class="form-group">
+                    <label for="telefone">Telefone :</label>
+                    <input class="form-control col-6" data-inputmask='"mask": "(99) 99999-9999"' data-mask type="text" name="telefone" id="telefone" value="" readonly>
+                    <span id="span-telefone" style="color:#ff0000;"></span>
+                  </div>
+                  <div class="form-group">
+                    <label for="tema">Tema :</label>
+                    <input class="form-control col-10" type="text" name="tema" id="tema" value="" readonly>
+                  </div>
+                  <div class="form-group">
+                    <label for="statusEvent">Status :</label>
+                    <select class="form-control col-6" name="statusEvent" id="statusEvent" readonly>
+                      {{options}}
+                    </select>
+                    <span id="span-status" style="color:#ff0000;"></span>
+                  </div>
+                  <div class="form-group">
+                      <label for="programs">Programa ou Evento Especial :</label>
+                      <select class="form-control col-8" name="programs" id="programs" readonly>
+                          {{optPrograms}}
+                      </select>
+                      <span id="span-programs" style="color:#ff0000;"></span>
+                  </div>
+                  <div class="form-group">
+                      <label for="departamentos">Departamento :</label>
+                      <select class="form-control col-8" name="departamentos" id="departamentos" readonly>
+                          {{optDptos}}
+                      </select>
+                      <span id="span-departamentos" style="color:#ff0000;"></span>
+                  </div>
+                  <div class="form-group">
+                    <label for="observacoes">Observações :</label>
+                    <textarea class="form-control col-10" rows="3" placeholder="Observações ..." style="height: 104px;" type="text" name="observacoes" id="observacoes" readonly></textarea>
+                  </div>
+              </div>
+              <div class="modal-footer">
+                <button type="submit" class="btn btn-warning" data-dismiss="modal">Fechar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </row>
+  </div>
+</section>

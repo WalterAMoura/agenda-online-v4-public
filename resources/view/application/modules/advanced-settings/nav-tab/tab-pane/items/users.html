@@ -1,0 +1,23 @@
+<tr>
+    <td><img width="25px" height="25px" src="{{URL}}/lib/img/{{onOffUser}}" mr-2 alt="{{onOffUser}}}"/></td>
+    <td>{{id}}</td>
+    <td>{{nome}}</td>
+    <td>{{login}}</td>
+    <td>{{email}}</td>
+    <td>{{nivel}}</td>
+    <td>{{statusUser}}</td>
+    <td>
+        <a id="{{idLinkResetPass}}" href="{{URL}}/{{MAIN_PATH_APP}}/advanced-settings/{{module}}/{{id}}/reset-pass" class="{{disabledResetPass}}" title="Clique aqui para resetar a senha do usuário" onclick="evtCLickResetPass(this.id)">
+            <i  class="fas fa-key {{disabledResetPass}}" style="font-size: 24px;"></i>
+        </a>
+        <a href="{{URL}}/{{MAIN_PATH_APP}}/advanced-settings/{{module}}/{{id}}/edit" class="{{disabledEdit}}" title="Clique aqui para editar os dados do usuário">
+            <i class="fas fa-edit {{disabledEdit}}" style="font-size: 24px;"></i>
+        </a>
+        <a href="{{URL}}/{{MAIN_PATH_APP}}/advanced-settings/{{module}}/{{id}}/delete" class="{{disabledRemove}}" title="Clique aqui para remover o usuário">
+            <i class="fas fa-trash-alt {{disabledRemove}}" style="font-size: 24px;"></i>
+        </a>
+        <a href="{{URL}}/{{MAIN_PATH_APP}}/advanced-settings/{{module}}/{{id}}/resend-account-activate" class="{{disabledResendAccountActivate}}" title="Clique aqui para reenviar o link de ativação da conta">
+            <i class="fa-solid fa-link {{disabledResendAccountActivate}}" style="font-size: 24px;"></i>
+        </a>
+    </td>
+</tr>

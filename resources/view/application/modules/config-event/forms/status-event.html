@@ -1,0 +1,64 @@
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h1>{{title}}</h1>
+          <hr>
+        </div>
+        <div class="col-sm-6">
+          <ol class="breadcrumb float-sm-right">
+            <!--<li class="breadcrumb-item"><a href="{{URL}}/agenda">Home</a></li>-->
+            <li class="breadcrumb-item"><a href="{{URL}}/{{MAIN_PATH_APP}}/config-event">Configurações</a></li>
+            <li class="breadcrumb-item active">{{breadcrumbItem}}</li>
+          </ol>
+        </div>
+      </div>
+    </div><!-- /.container-fluid -->
+  </section>
+  <section class="content">
+    <div class="container-fluid addPage">
+      <a href="{{URL}}/{{MAIN_PATH_APP}}/config-event/status-event">
+        <button type="button" class="btn btn-warning">Voltar</button>
+      </a>
+      <hr>
+      {{status}}
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card card-primary">
+            <div class="card-header">
+            </div>
+              <form method="post">
+                <div class="card-body">
+                  <div class="form-group">
+                    <label for="description">Descrição</label>
+                    <input type="text" name="description" id="description" class="form-control col-6" value="{{description}}" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="statusEvent">Status</label>
+                    <input type="text" name="statusEvent" id="statusEvent" class="form-control col-6" value="{{statusEvent}}" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="color">Color</label>
+                    <select class="form-control col-4" name="color" id="color">
+                      {{colors}}
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="textColor">Color</label>
+                    <select class="form-control col-4" name="textColor" id="textColor">
+                      {{textColors}}
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <button type="submit" class="btn btn-{{btnTipo}}">{{btnNome}}</button>
+                  </div>
+                </div>
+              </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

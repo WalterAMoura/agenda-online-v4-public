@@ -1,0 +1,48 @@
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h1>{{title}}</h1>
+          <hr>
+        </div>
+        <div class="col-sm-6">
+          <ol class="breadcrumb float-sm-right">
+            <!--<li class="breadcrumb-item"><a href="{{URL}}/agenda">Home</a></li>-->
+            <li class="breadcrumb-item"><a href="{{URL}}/{{MAIN_PATH_APP}}/manager-sound-team">Sonoplastia</a></li>
+            <li class="breadcrumb-item active">{{breadcrumbItem}}</li>
+          </ol>
+        </div>
+      </div>
+    </div><!-- /.container-fluid -->
+  </section>
+  <section class="content">
+    <div class="container-fluid addPage">
+      <a href="{{URL}}/{{MAIN_PATH_APP}}/manager-sound-team/suggested-time">
+        <button type="button" class="btn btn-warning">Voltar</button>
+      </a>
+      <hr>
+      {{status}}
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card card-danger">
+            <div class="card-header">
+            </div>
+            <form method="post">
+              <div class="card-body">
+                <div class="form-group">
+                  Você deseja realmente excluir o dispositivo <b>{{dayOfWeek}} ({{suggestedTime}}) </b> ?
+                  <br />
+                </div>
+                <div class="form-group">
+                  <button type="submit" class="btn btn-danger">Excluir</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

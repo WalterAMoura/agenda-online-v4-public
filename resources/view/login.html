@@ -1,0 +1,46 @@
+<div class="login-box">
+    <div class="card card-outline card-blue">
+        <div class="card-header text-center">
+            <div class="login-logo">
+                <img src="{{URL}}/{{PATH_LOGO_PNG_IASD}}" alt="Igreja Adventista do Sétimo Dia" class="brand-image" style="opacity: .8"  height="175" width="175">
+            </div>
+        </div>
+        <div class="card-body">
+            {{status}}
+            <p class="login-box-msg">Faça login para iniciar a sua sessão</p>
+            <form method="post">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Login" id="username" name="username" value="{{user}}">
+                    <div class="input-group-append">
+                        <div class="input-group-text">
+                            <span class="fas fa-user"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-group mb-3">
+                    <input type="password" class="form-control" placeholder="Senha" id="password" name="password" value="{{passwd}}">
+                    <div class="input-group-append">
+                        <div class="input-group-text">
+                            <span class="fas fa-lock"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-8">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" name="remember" value="remember" {{checked}}> Lembre-me
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <button type="submit" class="btn btn-success btn-block">Entrar</button>
+                    </div>
+                </div>
+                <p class="mb-1">
+                    <a href="forgot-password">Eu esqueci minha senha</a>
+                </p>
+            </form>
+        </div>
+    </div>
+</div>

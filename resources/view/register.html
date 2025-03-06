@@ -1,0 +1,78 @@
+<div class="register-box">
+    <div class="card card-outline card-primary">
+        <div class="card-header text-center">
+            <div class="login-logo">
+                <img src="{{URL}}/{{PATH_LOGO_PNG_IASD}}" alt="IASD Parque Regina" class="brand-image" style="opacity: .8"  height="75" width="75">
+            </div>
+        </div>
+        <div class="card-body">
+            {{status}}
+            <p class="login-box-msg">Solicitar acesso</p>
+
+            <form method="post">
+                <div class="input-group mb-3">
+                    <label for="fullName"></label>
+                    <input type="text" class="form-control" placeholder="Nome completo" id="fullName" name="fullName" required>
+                    <div class="input-group-append">
+                        <div class="input-group-text">
+                            <span class="fas fa-user"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-group mb-3">
+                    <label for="email"></label>
+                    <input type="email" class="form-control" placeholder="E-mail" id="email" name="email" required>
+                    <div class="input-group-append">
+                        <div class="input-group-text">
+                            <span class="fas fa-envelope"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-group mb-3">
+                    <label for="department"></label>
+                    <select class="form-control" name="department" id="department" {{disabled}}>
+                        {{departments}}
+                    </select>
+                    <div class="input-group-append">
+                        <div class="input-group-text">
+                            <span class="fa-solid fa-building-user"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-group mb-3">
+                    <label for="nova-senha"></label>
+                    <input type="password" class="form-control" maxlength="50" name="nova-senha" placeholder="Senha" id="nova-senha" required>
+                    <div class="input-group-append">
+                        <div class="input-group-text">
+                            <span class="fas fa-eye" id="show_password" style="border: none; background-color: transparent ;"></span>
+                        </div>
+                        <div class="input-group-text">
+                            <span class="fas fa-lock"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-group mb-3">
+                    <label for="conf-senha"></label>
+                    <input type="password" class="form-control" maxlength="50" name="conf-senha" placeholder="Repita a Senha" id="conf-senha" oninput="check_passwd('conf-senha','nova-senha')" required>
+                    <div class="input-group-append">
+                        <div class="input-group-text">
+                            <span class="fas fa-lock"></span>
+                        </div>
+                    </div>
+                </div>
+                <span id="span-passwd" style="color:#ff0000;"></span>
+                <div class="row">
+                    <!-- /.col -->
+                    <div class="col-4">
+                        <button type="submit" class="btn btn-primary btn-block">Registrar</button>
+                    </div>
+                    <!-- /.col -->
+                </div>
+            </form>
+            <p class="mt-3 mb-1">
+                <a href="{{URL}}/login">Login</a>
+            </p>
+        </div>
+        <!-- /.form-box -->
+    </div><!-- /.card -->
+</div>

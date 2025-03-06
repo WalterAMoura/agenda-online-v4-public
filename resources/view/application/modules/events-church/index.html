@@ -1,0 +1,73 @@
+<div class="content-wrapper" xmlns="http://www.w3.org/1999/html">
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h1>Agenda Departamentos Adventistas Parque Regina</h1>
+          <p>Agende um novo evento ou consulte os eventos agendados</p>
+        </div>
+        <div class="col-sm-6">
+          <ol class="breadcrumb float-sm-right">
+            <!--<li class="breadcrumb-item"><a href="{{URL}}/{{MAIN_PATH_APP}}">Home</a></li>-->
+            <li class="breadcrumb-item active">Agenda Departamentos</li>
+          </ol>
+        </div>
+      </div>
+    </div><!-- /.container-fluid -->
+  </section>
+  <section class="content">
+    <div class="container-fluid addPage">
+      <div class="row">
+        <div class="col-md-7">
+          <a href="{{URL}}/{{MAIN_PATH_APP}}/events-church/home" class="{{disabled}}">
+            <button type="button" class="btn btn-success {{disabled}}">Gestão Eventos</button>
+          </a>
+          <a href="{{URL}}/{{MAIN_PATH_APP}}/events-church/list-all">
+            <button type="button" class="btn btn-info">Todos Eventos</button>
+          </a>
+        </div>
+        <div class="col-md-2">
+          <p></p>
+        </div>
+        <div class="col-md-3">
+          <div class="info-box float-right">
+            <span class="info-box-icon bg-success"><i class="far fa-star"></i></span>
+            <div class="info-box-content">
+              <span class="info-box-text">Anciões do Mês: </span>
+              <span class="info-box-number" id="monthOfElder"> {{acionato}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr>
+      {{status}}
+      <div class="row">
+        <div class="col-md-3">
+          <div class="card card-secondary">
+            <div class="card-header">
+              <h3 class="card-title">Calendário </h3>
+            </div>
+            <div class="card-body" data-js="div">
+              <div class="calendarEventsChurch"  style='font-size:12px' id="objeto-calender"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-9">
+          <div class="card card-secondary">
+            <div class="card-header">
+              <h3 class="card-title">Lista De Eventos</h3>
+            </div>
+            <div class="card-body">
+              <div class="brand-image" style="opacity: .8;display: block; justify-content: center;  align-items: center;  height: 400px;" id="div-loading-events-church"><img style="position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);" src="{{URL}}/{{loading}}" width="48" height="48" alt="Loading">
+              </div>
+              <div class="table-responsive-sm" id="div-table-list-events-church" style="display: none">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+{{modalView}}

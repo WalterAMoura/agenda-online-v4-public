@@ -1,0 +1,43 @@
+<div class="row">
+    <div class="col-md-3" id="calendar">
+        <div class="card card-secondary">
+            <div class="card-header">
+                <h3 class="card-title">Calendário </h3>
+            </div>
+            <div class="card-body" data-js="div">
+                <div class="calendarWorshipTeamLineup"  style='font-size:12px'></div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-9">
+        <div class="row">
+            <div class="col-md-12" id="teamWorshipLineupDay">
+                <div class="card card-secondary">
+                    <div class="card-header">
+                        <h3 class="card-title">Escala do Dia</h3>
+                    </div>
+                    <div class="card-body">
+                        {{tableTeamLineupDay}}
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 mt-3" id="teamWorshipLineupMonth">
+                <div class="card card-secondary">
+                    <div class="card-header">
+                        <h3 class="card-title">Escala do Mês</h3>
+                    </div>
+                    <div class="card-body">
+                        <!--<a href="{{URL}}/agenda/reception/team-lineup/new" class="{{disabledTeamLineup}}">
+                            <button type="button" class="btn btn-success {{disabledTeamLineup}}">Definir Escala</button>
+                        </a>-->
+                        <hr>
+                        <div class="brand-image" style="opacity: .8;display: block; justify-content: center;  align-items: center;  height: 400px;" id="div-worship-team-lineup-loading"><img style="position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);" src="{{URL}}/lib/img/loading.gif" width="48" height="48" alt="Loading">
+                        </div>
+                        <div class="table-responsive-sm" id="div-table-list-worship-team-lineup" style="display: none">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

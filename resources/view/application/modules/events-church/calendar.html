@@ -1,0 +1,42 @@
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h1>Agenda Departamentos Adventistas Parque Regina</h1>
+          <p>Agende um novo evento ou edite eventos agendados para os departamentos</p>
+        </div>
+        <div class="col-sm-6">
+          <ol class="breadcrumb float-sm-right">
+            <!--<li class="breadcrumb-item"><a href="{{URL}}/{{MAIN_PATH_APP}}">Home</a></li>-->
+            <li class="breadcrumb-item"><a href="{{URL}}/{{MAIN_PATH_APP}}/events-church">Agenda Departamentos</a></li>
+            <li class="breadcrumb-item active">Gestão Eventos</li>
+          </ol>
+        </div>
+      </div>
+    </div><!-- /.container-fluid -->
+  </section>
+  <section class="content">
+    <div class="container-fluid addPage">
+      <a href="{{URL}}/{{MAIN_PATH_APP}}/events-church">
+        <button type="button" class="btn btn-warning">Voltar</button>
+      </a>
+      <hr>
+      {{status}}
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card card-secondary">
+            <div class="card-header">
+              <h3 class="card-title">Calendário </h3>
+            </div>
+            <div class="card-body" data-js="div">
+              <div class="mainCalendarEventsChurch"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+{{modal}}

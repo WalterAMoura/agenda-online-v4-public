@@ -1,0 +1,57 @@
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h1>{{title}}</h1>
+          <hr>
+        </div>
+        <div class="col-sm-6">
+          <ol class="breadcrumb float-sm-right">
+            <!--<li class="breadcrumb-item"><a href="{{URL}}/agenda">Home</a></li>-->
+            <li class="breadcrumb-item"><a href="{{URL}}/{{MAIN_PATH_APP}}/advanced-settings">Configurações</a></li>
+            <li class="breadcrumb-item active">{{breadcrumbItem}}</li>
+          </ol>
+        </div>
+      </div>
+    </div><!-- /.container-fluid -->
+  </section>
+  <section class="content">
+    <div class="container-fluid addPage">
+      <a href="{{URL}}/{{MAIN_PATH_APP}}/advanced-settings/level">
+        <button type="button" class="btn btn-warning">Voltar</button>
+      </a>
+      <hr>
+      {{status}}
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card card-primary">
+            <div class="card-header">
+            </div>
+              <form method="post">
+                <div class="card-body">
+                  <div class="form-group">
+                    <label>Descrição</label>
+                    <input type="text" name="description" class="form-control col-6" value="{{description}}" required>
+                  </div>
+
+                  <div class="form-group">
+                    <label>Level</label>
+                    <input type="text" name="level" class="form-control col-6" value="{{level}}" required>
+                  </div>
+                  <div class="form-group">
+                    <label>Home Path</label>
+                    <input type="text" name="homePath" class="form-control col-4" value="{{homePath}}" placeholder="/path1/path1" required>
+                  </div>
+                  <div class="form-group">
+                    <button type="submit" class="btn btn-{{btnTipo}}">{{btnNome}}</button>
+                  </div>
+                </div>
+              </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

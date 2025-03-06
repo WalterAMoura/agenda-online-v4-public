@@ -1,0 +1,23 @@
+<a href="{{URL}}/{{MAIN_PATH_APP}}/reception/ask-to-change/requested" class="{{disabledMyAskToChange}}">
+  <button type="button" class="btn btn-success {{disabledMyAskToChange}}">Minhas Solicitações de Troca</button>
+</a>
+<a href="{{URL}}/{{MAIN_PATH_APP}}/reception/ask-to-change/received" class="{{disabledMyAskToChange}}">
+  <button type="button" class="btn btn-warning {{disabledMyAskToChange}}">Solicitações de Troca Recebida [{{totalPendente}}]</button>
+</a>
+<hr>
+<div class="table-responsive-sm">
+  <table id="tableMyScheduler" class="table table-striped-columns table-hover table-sm">
+    <thead class="table-secondary">
+    <tr>
+      <th style="width: 200px">Data</th>
+      <th style="width: 300px">Dia Da Semana</th>
+      <th style="width: 450px">Quem</th>
+      <th style="width: 300px">Mês</th>
+      <th style="width: 400px">Ações</th>
+    </tr>
+    </thead>
+    <tbody id="tBodyMyScheduler">
+    {{itens}}
+    </tbody>
+  </table>
+</div>

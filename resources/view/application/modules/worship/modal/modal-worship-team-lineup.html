@@ -1,0 +1,76 @@
+<section class="content">
+    <div class="container-fluid">
+        <form id="formViewWorshipTeamLineup">
+            <div class="modal fade" id="modalViewWorshipTeamLineup" tabindex="-1" role="dialog" aria-labelledby="modalViewWorshipTeamLineup" aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title texto-modal text-center" id="idTitleModal">{{title}}</h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="card card-primary">
+                                        <div class="card-header"></div>
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="card card-success">
+                                                        <div class="card-header">
+                                                            <h5>Equipe Louvor</h5>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <div class="form-group">
+                                                                <label for="schedulerDate">Data Escala</label>
+                                                                <input class="form-control col-6" type="date" name="schedulerDate" id="schedulerDate" value="" readonly>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="worshipTeam">Equipe de Louvor</label>
+                                                                <select class="select2" multiple="multiple" data-placeholder="Escolha os cantores" data-dropdown-css-class="select2-green" style="width: 100%;" name="worships[]" id="worshipTeam" readonly disabled>
+                                                                    {{optWorships}}
+                                                                </select>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="worshipMusics">Musicas</label>
+                                                                <textarea class="form-control" id="worshipMusics" name="worshipMusics" style="height: 187px;" readonly></textarea>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="card card-secondary">
+                                                        <div class="card-header">
+                                                            <h5>Mensagem Especial</h5>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <div class="form-group">
+                                                                <label for="singers">Cantor(a)</label>
+                                                                <select class="select2" multiple="multiple" data-placeholder="Escolha os cantores" data-dropdown-css-class="select2-gray" style="width: 100%;" name="singers[]" id="singers" readonly disabled>
+                                                                    {{optSingers}}
+                                                                </select>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="singerMusics">Musicas</label>
+                                                                <textarea class="form-control" id="singerMusics" name="singerMusics" style="height: 273px;" readonly></textarea>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-warning" data-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
