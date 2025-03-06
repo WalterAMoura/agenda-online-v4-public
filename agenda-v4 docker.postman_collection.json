@@ -1,0 +1,324 @@
+{
+	"info": {
+		"_postman_id": "05086cea-e62c-43ba-a2b8-795c4ab1b301",
+		"name": "agenda-v4 docker",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14766746"
+	},
+	"item": [
+		{
+			"name": "Get Info API",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{authorization}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-api-key",
+						"value": "{{apikey}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{urlBase}}/v1",
+					"host": [
+						"{{urlBase}}"
+					],
+					"path": [
+						"v1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Gerar Token",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.collectionVariables.set(\"authorization\", \"\");",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"    const response = pm.response.json();",
+							"    pm.collectionVariables.set(\"authorization\", response.token);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "{{apikey}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\" : \"sysadmin@sleyersx.com.br\",\n    \"password\" : \"sleyersx003\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{urlBase}}/v1/auth",
+					"host": [
+						"{{urlBase}}"
+					],
+					"path": [
+						"v1",
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Check Token",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-api-key",
+						"value": "{{apikey}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"token\" : \"{{authorization}}\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{urlBase}}/v1/check",
+					"host": [
+						"{{urlBase}}"
+					],
+					"path": [
+						"v1",
+						"check"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Events",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{authorization}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{urlBase}}/v1/event?page=25",
+					"host": [
+						"{{urlBase}}"
+					],
+					"path": [
+						"v1",
+						"event"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "25"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Overdue AskToChange",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{}"
+				},
+				"url": {
+					"raw": "{{urlBase}}/v1/ask-to-change/overdue",
+					"host": [
+						"{{urlBase}}"
+					],
+					"path": [
+						"v1",
+						"ask-to-change",
+						"overdue"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get By Event",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{authorization}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{urlBase}}/v1/event/1",
+					"host": [
+						"{{urlBase}}"
+					],
+					"path": [
+						"v1",
+						"event",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get By Event Copy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJBMjU2S1ciLCJlbmMiOiJBMjU2Q0JDLUhTNTEyIiwiemlwIjoiREVGIn0.XIxIUDWst9VqDKu-8UUgEeEe8zBtdLmDEw1cjSgITn8oyrHB7BxuOqjTZq0z6iqXtPvC_ucMXooZf9EHuy7xmgXQQmnkHD5V.x7D3t9uZnk0GGuW_AxEQRg.gRnnOWdTaRBIvfS6pqBavpjfoaf8BLk50diY-3ziQ1uDISRmticmzIn-YxUFvf8H27CjCjj-2Zu5aVW4VpXdBxhug2dR00WcdLjikg8kUtaOnO9GVSMVFQtS1LQXQosTkjrZgX5PgOv-8LQeK0O5iXLhz6dNOWT8DJsHJglr88kbkSMlRhwEdUK3CKORfyjfe9IL0Rl4muE9RlW5tAA9Ig.ETl3xTSvlc_ah1BaN8ncGjbZNkcmnPUlXAHmGch-4_0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{urlBase}}/v1/event/131",
+					"host": [
+						"{{urlBase}}"
+					],
+					"path": [
+						"v1",
+						"event",
+						"131"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "authorization",
+			"value": ""
+		},
+		{
+			"key": "urlBase",
+			"value": "http://localhost:80/app-agenda-v4/api",
+			"type": "string"
+		},
+		{
+			"key": "apikey",
+			"value": "cbde0f8d35b6443168614339a04fd739",
+			"type": "string"
+		}
+	]
+}
