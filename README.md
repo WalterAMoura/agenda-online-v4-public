@@ -9,7 +9,7 @@ Nova versão do aplicativo WEB Agenda
 # Configurações do Projeto
 
 - **Caminho do Arquivo de Configuração**:
-    - `/var/www/html/config/env/cadastro-fornecedor/.env`
+    - `/var/www/html/config/env/app-agenda/.env`
   
 Este repositório contém um arquivo de configuração em linguagem Shell Script que define várias variáveis de ambiente para configurar um sistema ou aplicação. Abaixo está uma explicação das principais variáveis definidas no arquivo:
 
